@@ -3,10 +3,3 @@ scala:
 - 2.12.2
 jdk:
 - oraclejdk8
-deploy:
-  provider: heroku
-  api_key:
-    secure: NKkZAk/Z2lq0qrv8RssTEzibxO0XBGqb9AutxzyotbeHmLItrD3eqgM0Bjohhw2R5Z5+liz5R1K4nJ57Kob+LnI9TTwNXOzNfzzvGdkNdeQRugKqR2HY2tnbF6Zd9OdbdhHXZQ1DO15fCWjkOcUPS9TGsuvAzH8pTkjve4n82Cl27xi/2n3qOQ0Dmabw/ufHb4EgcGb5heDAsq67fBHN8rWRAlaW8fVdZPit7a0izo085muCIUXzbH3F4wEoCvGoa892B0NjtmGnLQaG+JMkhVuEIed+58xwEiCBEBwztPu7UqKa6+pM8gmMllqwroTFW5ncqc9unpOGlJmsVdgBa17mD9qcvac3Xj7kmXpgVKjhErGKVXximRhquDWFjsvyvS1BO9yZka20pXwPrEYVuC4m4lGnLPNjPH76xP9jZON5RL3DnlnvDAgI/0LX75/557v5Ti+nrEcahyLnDtmd4jmPE3wwkQ/FVVAzvcaOKupjeInk/fnTe1EhrBWzwnQ95fBbFUv9+Pc/eh97gPCDjWEQczqydiJvnCh3MY/RuNgf0m9BSdTtFMF6mBvIZshqrFoD6RMoFb0kM3I3H255vUx7nY5riXTypsK4NQqVJ1/FqvE6JTyZBCHIQnZ82w9JKGU/z8W/4VxLQsd8KXcmaj5Kk298Rmq8cIrNrv0GRIc=
-  app: shooshoo
-  on:
-    repo: Froom2/shooshoo
