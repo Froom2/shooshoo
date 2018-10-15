@@ -8,8 +8,10 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
 scalaVersion := "2.12.6"
 
 libraryDependencies += guice
-libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test
-
+libraryDependencies ++= Seq(
+  "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test,
+  "org.reactivemongo" %% "play2-reactivemongo" % "0.16.0-play26"
+)
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "shoo.controllers._"
 
