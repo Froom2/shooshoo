@@ -33,7 +33,7 @@ class TestController @Inject() (
 
       override def onNext(result: Completed): Unit = println("Inserted")
 
-      override def onError(e: Throwable): Unit = println("Failed")
+      override def onError(e: Throwable): Unit = println("Failed: " + e.getMessage + "\nFailed trace: " + e.getStackTrace)
 
       override def onComplete(): Unit = println("Completed")
     })
