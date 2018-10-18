@@ -25,6 +25,8 @@ class TestController @Inject() (
 
   def test() = Action { implicit request: Request[AnyContent] =>
 
+    println("database uri: " + databaseUri)
+
     val observable: Observable[Completed] = collection.insertOne(doc)
 
     observable.subscribe(new Observer[Completed] {
