@@ -3,16 +3,15 @@ package controllers
 import java.time.LocalDateTime
 import javax.inject.Inject
 
-import com.mongodb.{MongoClientSettings, ServerAddress}
 import org.mongodb.scala.bson.collection.Document
 import org.mongodb.scala.{Completed, MongoClient, MongoCollection, MongoDatabase, Observable, Observer}
 import play.api.mvc.{AbstractController, AnyContent, ControllerComponents, Request}
 
 class TestController @Inject() (
                                components: ControllerComponents,
-                             ) extends AbstractController(components) {
+                             ) extends AbstractController(components) with App {
 
-  val databaseUri = sys.env.get("mongodb.uri").getOrElse("mongodb://localhost")
+  val databaseUri = System.getenv("mongodb.uri")
 
   val mongoClient: MongoClient = MongoClient(databaseUri)
 
