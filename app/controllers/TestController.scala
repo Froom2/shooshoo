@@ -19,8 +19,9 @@ class TestController @Inject() (
   def test() = Action { implicit request: Request[AnyContent] =>
 
     val databaseUri = config.get[String]("mongodb.uri")
+    val databaseName = config.get[String]("mongodb.name")
     val mongoClient: MongoClient = MongoClient(databaseUri)
-    val database: MongoDatabase = mongoClient.getDatabase("mydb")
+    val database: MongoDatabase = mongoClient.getDatabase(databaseName)
     val collection: MongoCollection[Document] = database.getCollection("test")
     val doc: Document = Document("_id" -> LocalDateTime.now.toString, "name" -> "MongoDB", "type" -> "database",
       "count" -> 1, "info" -> Document("x" -> 203, "y" -> 102))
